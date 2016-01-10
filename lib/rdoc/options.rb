@@ -375,7 +375,7 @@ class RDoc::Options
     @title = nil
     @update_output_dir = true
     @verbosity = 1
-    @visibility = :protected
+    @visibility = :private
     @webcvs = nil
     @write_options = false
 
@@ -772,8 +772,8 @@ Usage: #{opt.program_name} [options] [names...]
 
       opt.on("--visibility=VISIBILITY", "-V", RDoc::VISIBILITIES + [:nodoc],
              "Minimum visibility to document a method.",
-             "One of 'public', 'protected' (the default),",
-             "'private' or 'nodoc' (show everything)") do |value|
+             "One of 'public', 'protected',",
+             "'private' or 'nodoc' (show everything, the default)") do |value|
         @visibility = value
       end
 
